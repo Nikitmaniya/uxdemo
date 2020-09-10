@@ -1,0 +1,32 @@
+.card p{
+   
+    font-size: 32px;
+    font-weight: 600;
+    padding: 2rem;
+ 
+}
+
+.book{
+    color:white;
+    background-color: chocolate;
+    font-family: 'roboto';
+    height: 50;
+    font-size:18px;
+    border: 3px solid black;
+
+    
+}
+.price{
+    color: crimson;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    
+}
+.product{
+    text-transform: uppercase;
+    
+}
+.table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}

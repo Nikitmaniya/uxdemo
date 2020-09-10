@@ -1,0 +1,149 @@
+<h1>Api call</h1>
+
+<button value="Laptop" (click)="mycart($event)">Laptop</button>
+<button value="Mobile" (click)="mycart($event)">Mobile</button>
+<button value="Tv" (click)="mycart($event)">TV</button><br><br>
+
+
+<h1>
+    <p>{{msg}}</p>
+</h1>
+<input #target type="text" value="test" name="Demo"><br>
+<button (click)="mytest(target)">Enter</button><br><br>
+
+
+<!-- <style>
+    table,
+    th,
+    td {
+        border: 2px solid chocolate;
+        border-collapse: collapse;
+
+    }
+
+    th,
+    td {
+        padding: 15px;
+    }
+</style> -->
+
+<button (click)=" getresponse('employees')" class="btn btn-success" value="employees" *ngIf="isShow"
+    [ngClass]="'button'" disabled>Click
+    Button</button>
+
+
+<a href="https://www.facebook.com/"><button *ngIf="ishome">Home</button></a><br><br>
+
+
+<!-- <table style="width:100%" *ngIf="apidata.length > 0">
+
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>SALARY</th>
+        <th>AGE</th>
+    </tr>
+    <tr *ngFor="let item of apidata" [ngClass]="''">
+        <td>{{item.id}}</td>
+        <td>{{item.employee_name}}</td>
+        <td>{{item.employee_salary}}</td>
+        <td>{{item.employee_age}}</td>
+    </tr>
+
+</table> -->
+
+<!-- <div class="container-fluid ">
+
+    <div class="row">
+        <div class="col-md-6">
+            <table style="width:100%">
+
+                <tr class="book">
+                    <th>ID</th>
+                    <th>IMAGE</th>
+                    <th>PRODUCT NAME</th>
+                    <th>PRODUCT ID</th>
+                    <th>PRICE</th>
+                </tr>
+                <tr *ngFor="let demo of product">
+                    <td>{{demo.id}}</td>
+                    <td><img src="{{demo.image}}" width="70" height="auto"></td>
+                    <td class="product">{{demo.name}}</td>
+                    <td>{{demo.Productid}}</td>
+                    <td class="price">{{demo.price}}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="col-md-6">
+            <table style="width:100%">
+
+                <tr class="book">
+                    <th>ID</th>
+                    <th>IMAGE</th>
+                    <th>PRODUCT NAME</th>
+                    <th>PRODUCT ID</th>
+                    <th>PRICE</th>
+                </tr>
+                <tr *ngFor="let test of product">
+                    <td>{{test.id}}</td>
+                    <td><img src="{{test.image}}" width="70" height="auto"></td>
+                    <td class="product">{{test.name}}</td>
+                    <td>{{test.Productid}}</td>
+                    <td class="price">{{test.price}}</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+</div> -->
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="pl-3">
+            <input type="name" placeholder="USERNAME" #uname>
+
+
+        </div>
+        <div class="pl-3 ">
+            <button class="btn btn-success" (click)="getuser(uname)">Create User</button>
+            <button class="btn btn-danger" (click)="clickremove()">DELETE</button>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <table style="width:100%" class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>USERNAME</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>
+                            {{user.name}}
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" (click)="clickremove()">DELETE ITEM</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
