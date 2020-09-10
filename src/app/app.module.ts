@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './header/home/home.component';
 import { DemoComponent } from './header/demo/demo.component';
 import { PriceComponent } from './header/price/price.component';
+import { ErrorComponent } from './header/error/error.component';
+import { LaptopComponent } from './laptop/laptop.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { PriceComponent } from './header/price/price.component';
     DemoComponent,
     PriceComponent,
     HeaderComponent,
+    LaptopComponent,
     
    
   ],
@@ -35,8 +38,14 @@ import { PriceComponent } from './header/price/price.component';
       {path:"", redirectTo:"", pathMatch:"full"},
       {path:"home", component:HomeComponent},
       {path:"demo", component:DemoComponent},
-      {path:"price",component:PriceComponent},
-      {path:"header",component:HeaderComponent}
+      {path:"price", children:[
+        {path:"", component:PriceComponent},
+        {path:"laptop", component:LaptopComponent}
+
+      ]},
+      {path:"header",component:HeaderComponent},
+      {path:"**",component:ErrorComponent}
+      
 
 
     ])
